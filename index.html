@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Анімації</title>
+</head>
+<body>
+    <div class="parentfirst">
+        <p class="firstanimation">Artem</p>
+    </div>
+    <div class="parentsecond">
+        <div class="word">
+            <span>A</span>
+            <span>R</span>
+            <span>T</span>
+            <span>E</span>
+            <span>M</span>
+        </div>
+        <p>Click letter to restart animation.</p>
+    </div>
+    <div class="parentthird">
+        <div id="wrapper">
+            <div id="container">
+                <h1>Artem</h1>
+                <p>Hover over text to pause.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const spans = document.querySelectorAll('.word span');
+
+    spans.forEach((span, idx) => {
+        span.addEventListener('click', (e) => {
+            e.target.classList.add('active');
+        });
+        span.addEventListener('animationend', (e) => {
+            e.target.classList.remove('active');
+        });
+        
+        // Initial animation
+        setTimeout(() => {
+            span.classList.add('active');
+        }, 750 * (idx+1))
+    });
+</script>
