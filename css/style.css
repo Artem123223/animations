@@ -255,3 +255,83 @@ a:hover {
       transition: none !important;
     }
 }
+div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.style-text {
+    font-size: 8rem;
+    transition: all 2s ease;
+}
+.a {
+    transform: translateX(-600%);
+    color: red;
+    animation: animate 2s ease infinite;
+}
+.b {
+    transform: translate(-150%, -250%);
+    color: yellow;
+    animation: unu 2s ease infinite;
+}
+.c {
+    transform: translateY(250%);
+    color: green;
+    animation: jake 2s ease infinite;
+}
+.d {
+    transform: translate(200%, -250%);
+    color: blue;
+    animation: bum 2s ease infinite;
+}
+.e {
+    transform: translateX(600%);
+    color: purple;
+    animation: ag 2s ease infinite;
+}
+@keyframes animate {
+    0% {
+        transform: translateX(-600%);
+    }
+    100% {
+        transform: translateX(0%);
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes unu {
+    0% {
+        transform: translate(-150%, -250%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes jake {
+    0% {
+        transform: translateY(250%);
+    }
+    100% {
+        transform: translate(0%);
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes bum {
+    0% {
+        transform: translate(200%, -250%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes ag {
+    0% {
+        transform: translateX(600%);
+    }
+    100% {
+        transform: translateX(0%);
+        filter: hue-rotate(360deg);
+    }
+}
